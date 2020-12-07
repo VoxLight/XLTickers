@@ -1,0 +1,4 @@
+numpy==1.19.3
+openpyxl
+pandas_datareader
+tkinter
