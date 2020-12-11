@@ -1,5 +1,6 @@
-from toucher import touch_account_rows
 from common import globals_, get_ticker_price
+from openpyxl.utils.datetime import to_excel as date_to_excel
+from toucher import touch_account_rows
 import datetime as dt
 
 price_storage = {}
@@ -31,7 +32,7 @@ def _update_price(ticker, cell):
     
 # 3
 def _update_date(cell):
-    cell.value = dt.datetime.today().date()
+    cell.value = date_to_excel(dt.datetime.today())
 
 
 def update_prices(ws):
