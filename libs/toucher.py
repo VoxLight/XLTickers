@@ -1,7 +1,14 @@
+# pypi libs
 from openpyxl.cell.cell import MergedCell
 import pandas_datareader as web
-from common import trunc, CONFIG, get_ticker_price
+
+# local libs
 import datetime as dt
+
+# project libs
+from libs.common import trunc, CONFIG, get_ticker_price
+
+
 
 def _valid_row(cell):
     if type(cell) == MergedCell:

@@ -8,7 +8,7 @@ from libs.opener import get_worksheet
 from libs.menu import menu
 
 
-# scripts
+# project scripts
 from scripts.price_updater import update_prices
 SCRIPTS = {
     "Update prices": update_prices

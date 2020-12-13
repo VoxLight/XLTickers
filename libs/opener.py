@@ -1,7 +1,13 @@
-from tkinter import filedialog
-from common import clear, globals_
-from menu import menu
+# pypi libs
 import openpyxl
+
+# local libs
+from tkinter import filedialog
+
+# project libs
+from libs.common import clear, globals_
+from libs.menu import menu
+
 
 
 

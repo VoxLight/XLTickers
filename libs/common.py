@@ -1,9 +1,14 @@
-
-from collections import defaultdict as DD
+# pypi libs
 import pandas_datareader as web
+
+# local libs
+from collections import defaultdict as DD
 import datetime as dt
 import configparser
 import os
+
+# project libs
+
 
 class Globals:
     def __init__(self):

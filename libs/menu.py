@@ -1,4 +1,9 @@
-from common import _get_valid_input
+# pypi libs
+
+# local libs
+
+# project libs
+from libs.common import _get_valid_input
 
 
 def _invalid_menu_option(items, input_):
