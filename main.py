@@ -1,8 +1,15 @@
-from common import _get_valid_input, print_errors, globals_
-from price_updater import update_prices
-from opener import get_worksheet
-from menu import menu
+# pypi libs
 
+# local libs
+
+# project libs
+from libs.common import _get_valid_input, print_errors, globals_
+from libs.opener import get_worksheet
+from libs.menu import menu
+
+
+# scripts
+from scripts.price_updater import update_prices
 SCRIPTS = {
     "Update prices": update_prices
 }
