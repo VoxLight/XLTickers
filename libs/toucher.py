@@ -30,8 +30,8 @@ def _valid_row(cell):
 def _format_col_row_2_cell(column_let, row_num):
     return column_let + str(row_num)
 
-def touch_account_rows(ws, action):
-    start, stop = CONFIG["GENERAL"]["start_word"], CONFIG["GENERAL"]["stop_word"]
+def touch_account_rows(ws, action, cols):
+    start, stop = CONFIG["XL"]["start_word"], CONFIG["XL"]["stop_word"]
     
     account_num = 0
     
@@ -48,12 +48,11 @@ def touch_account_rows(ws, action):
             continue
             
         if touch and _valid_row(cell):
-            price_column = CONFIG["XL"]["price_column"]
-            date_column = CONFIG["XL"]["date_column"]
             
             ticker = cell.value
-            price_cell = ws[_format_col_row_2_cell(price_column, cell.row)]
-            date_cell = ws[_format_col_row_2_cell(date_column, cell.row)]
-            action(ticker, price_cell, date_cell)
+            cells = [
+                ws[_format_col_row_2_cell(col, cell.row)] for col in cols
+            ]
+            action(ticker, cells)
         
 

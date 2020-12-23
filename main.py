@@ -9,9 +9,11 @@ from libs.menu import menu
 
 
 # project scripts
-from scripts.price_updater import update_prices
+import scripts.price_updater as price_updater
+import scripts.alert_updater as alert_updater
 SCRIPTS = {
-    "Update prices": update_prices
+    price_updater.NAME: price_updater.run,
+    alert_updater.NAME: alert_updater.run
 }
 
 def save(wb):

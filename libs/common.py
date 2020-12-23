@@ -37,11 +37,6 @@ CONFIG_PATH = "./config.ini"
 CONFIG = configparser.ConfigParser()
 CONFIG.read(CONFIG_PATH)
 
-
-def trunc(num):
-    return round(num, 2)
-
-
 def clear():
     os.system('cls')
     
@@ -50,17 +45,6 @@ def print_errors():
         print(f"Ticker {k} errored at: {', '.join(v)}")
  
     
-def get_ticker_price(ticker, days_prior=5, head=True):
-    position = -1 if head else 0
-    now = dt.datetime.today()
-    past_point = now - dt.timedelta(days=days_prior)
-    try:
-        return trunc(web.DataReader(ticker, data_source='yahoo', start=past_point, end=now)["Close"][position])
-    except Exception as e:
-        print(f"Attempting to set {ticker} caused an error: ")
-        print(str(e))
-        return False
-
 
 def _get_valid_input(err_msg, is_valid_condition, ask_txt, return_type=None):
     while not is_valid_condition(txt := input(ask_txt)):
@@ -70,3 +54,11 @@ def _get_valid_input(err_msg, is_valid_condition, ask_txt, return_type=None):
         return return_type(txt)
     
     return txt
+
+
+
+
+
+
+if __name__ == "__main__":
+    print(get_ticker_price("AMD", 365, False))
