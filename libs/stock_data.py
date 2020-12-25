@@ -7,7 +7,11 @@ storage = {}
 
 
 def __add_to_storage(ticker, data):
-    storage[ticker] = data
+    to_store = {
+        "price":__get_df_close(data), # get the closing price
+        "date":__get_df_date(data) # get the date
+    }
+    storage[ticker] = to_store
     
 def __get_from_storage(ticker):
     if ticker in storage.keys():
@@ -24,36 +28,48 @@ def __get_df_date(data): # Return the DateTime of the DatetimeIndex of a Df
 def __get_df_close(data): # Return the closing price of a DF in a truncated format
     return __trunc(data["Close"][0])
 
-def _get_ticker_data(ticker, days_ago=None):
-    data = __get_from_storage(ticker)
-    if data:
-        return data
+def __get_price_ago(ticker, days_ago):
+    start = dt.datetime.today() - dt.timedelta(days=days_ago)
+    data = web.DataReader(ticker, data_source='yahoo', start=start, end=dt.datetime.today()).head(1)
+    __add_to_storage(ticker, data)
     
-    if not days_ago:
-        start = dt.datetime.today() - dt.timedelta(days=5)
-        data = web.DataReader(ticker, data_source='yahoo', start=start).head(1)
-    else:
-        start = dt.datetime.today() - dt.timedelta(days=5)
-        end = start + dt.timedelta(days=5)
-        data = web.DataReader(ticker, data_source='yahoo', start=start).tail(1)
+def __get_recent_price(ticker):
+    start = dt.datetime.today() - dt.timedelta(days=5)
+    data = web.DataReader(ticker, data_source='yahoo', start=start, end=dt.datetime.today()).tail(1)
+    __add_to_storage(ticker, data)
 
     
-    to_store = (
-        __get_df_close(data), # get the closing price
-        __get_df_date(data) # get the date
-    )
-    __add_to_storage(ticker, to_store)
+
+def _get_ticker_data(ticker, days_ago=None):
+    # See if we already have stock info on this ticker
+    data = __get_from_storage(ticker) 
+    if data:
+        # If we do, return it
+        return data
+    
+    
+    try:
+        if days_ago:
+            __get_price_ago(ticker, days_ago)
+        else:
+            __get_recent_price(ticker)
+            
+    except KeyError:
+        print("No price information found for:", ticker, "\n    ln 53")
+        return None
+
+
     return __get_from_storage(ticker)
 
 
 def get_price(ticker, **options):
-    return _get_ticker_data(ticker, **options)[0]
+    return _get_ticker_data(ticker, **options)["price"]
 
 def get_date(ticker, **options):
-    return _get_ticker_data(ticker, **options)[1]
+    return _get_ticker_data(ticker, **options)["date"]
 
 
 
 
 if __name__ == "__main__":
-    print(get_date("AMD", days_ago=333))
+    print(get_price("QS", days_ago=365))

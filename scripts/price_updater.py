@@ -5,10 +5,10 @@ from openpyxl.utils.datetime import to_excel as date_to_excel
 import datetime as dt
 
 # project libs
-from libs.stock_data import get_price, get_date
+from libs.stock_data import get_price
 from libs.toucher import touch_account_rows
 from libs.common import globals_, CONFIG
-from scripts.common import _cols
+from scripts.common import _cols, _err
 
 
 
@@ -27,8 +27,7 @@ def _update_price(ticker, cell):
     price = get_price(ticker)
         
     if not price:
-        globals_.add_error(ticker, cell.coordinate)
-        return False
+        _err(ticker, cell)
     
     print(f"Setting {cell.coordinate}:{ticker} close={price}")
     cell.value = price

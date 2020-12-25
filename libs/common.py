@@ -14,6 +14,15 @@ class Globals:
     def __init__(self):
         self._errors = DD(list)
         self._workbook_fp = None
+        self._days_ago = 0
+    
+    @property
+    def days_ago(self):
+        return self._days_ago
+    
+    @days_ago.setter
+    def days_ago(self, days):
+        self._days_ago = days
         
     @property
     def workbook_fp(self):
@@ -42,7 +51,10 @@ def clear():
     
 def print_errors():
     for k, v in globals_.errors.items():
-        print(f"Ticker {k} errored at: {', '.join(v)}")
+        print(f"Ticker {k} errored on row(s): {', '.join(v)}")
+        
+def trunc(num):
+    return round(num, 2)
  
     
 
@@ -54,11 +66,3 @@ def _get_valid_input(err_msg, is_valid_condition, ask_txt, return_type=None):
         return return_type(txt)
     
     return txt
-
-
-
-
-
-
-if __name__ == "__main__":
-    print(get_ticker_price("AMD", 365, False))

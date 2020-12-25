@@ -6,7 +6,7 @@ import pandas_datareader as web
 import datetime as dt
 
 # project libs
-from libs.common import trunc, CONFIG, get_ticker_price
+from libs.common import trunc, CONFIG
 
 
 
