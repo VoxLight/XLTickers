@@ -54,7 +54,7 @@ def print_errors():
         print(f"Ticker {k} errored on row(s): {', '.join(v)}")
         
 def trunc(num):
-    return round(num, CONFIG["DATA"]["rounding"])
+    return round(num, int(CONFIG["DATA"]["rounding"]))
  
     
 

@@ -1,6 +1,7 @@
 import datetime as dt
 import pandas_datareader as web
 from pandas import to_datetime
+from libs.common import trunc
 
 
 storage = {}
@@ -18,15 +19,12 @@ def __get_from_storage(ticker):
         return storage[ticker]
     return None
 
-def __trunc(num): # truncate a fractional share into a USD amount
-    return round(num, 2)
-
 def __get_df_date(data): # Return the DateTime of the DatetimeIndex of a Df
     # RESOURCE: https://pandas.pydata.org/pandas-docs/version/0.18.1/generated/pandas.DatetimeIndex.html
     return data.index.date[0]
 
 def __get_df_close(data): # Return the closing price of a DF in a truncated format
-    return __trunc(data["Close"][0])
+    return trunc(data["Close"][0])
 
 def __get_price_ago(ticker, days_ago):
     start = dt.datetime.today() - dt.timedelta(days=days_ago)
