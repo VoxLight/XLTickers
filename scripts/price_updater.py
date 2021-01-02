@@ -28,6 +28,7 @@ def _update_price(ticker, cell):
         
     if not price:
         _err(ticker, cell)
+        return False
     
     print(f"Setting {cell.coordinate}:{ticker} close={price}")
     cell.value = price
