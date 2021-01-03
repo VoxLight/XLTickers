@@ -51,7 +51,7 @@ def clear():
     
 def print_errors():
     for k, v in globals_.errors.items():
-        print(f"Ticker {k} errored on row(s): {', '.join(v)}")
+        print(f"Ticker {k} errored on row(s): {str(v)}")
         
 def trunc(num):
     return round(num, int(CONFIG["DATA"]["rounding"]))

@@ -64,7 +64,7 @@ def _get_ticker_data(ticker, days_ago=None):
             __get_recent_price(ticker)
             
     except:
-        print("No price information found for:", ticker, "\n    ln 53")
+        print("No price information found for:", ticker)
         __no_price_info(ticker)
 
     return __get_from_storage(ticker)
