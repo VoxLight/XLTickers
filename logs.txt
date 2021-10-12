@@ -1,0 +1,1401 @@
+DEBUG:root:Starting
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ALB/history?period1=1632735984&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CVS/history?period1=1632735985&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LSCC/history?period1=1632735986&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NVDA/history?period1=1632735987&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TEX/history?period1=1632735988&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/INFY/history?period1=1632735989&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PUBM/history?period1=1632735990&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TLOFF/history?period1=1632735991&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NGAC/history?period1=1632735992&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 302 36
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /lookup?s=NGAC HTTP/1.1" 200 None
+DEBUG:root:################################################################
+DEBUG:root:Error:
+DEBUG:root:No data fetched for symbol NGAC using YahooDailyReader
+DEBUG:root:Traceback:
+DEBUG:root:Starting
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ALB/history?period1=1632736177&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CVS/history?period1=1632736178&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LSCC/history?period1=1632736179&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NVDA/history?period1=1632736180&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TEX/history?period1=1632736181&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/INFY/history?period1=1632736182&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PUBM/history?period1=1632736183&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TLOFF/history?period1=1632736184&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NGAC/history?period1=1632736185&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 302 36
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /lookup?s=NGAC HTTP/1.1" 200 None
+DEBUG:root:################################################################
+ERROR:root:No data fetched for symbol NGAC using YahooDailyReader
+Traceback (most recent call last):
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\yahoo\daily.py", line 153, in _read_one_data
+    data = j["context"]["dispatcher"]["stores"]["HistoricalPriceStore"]
+KeyError: 'HistoricalPriceStore'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 66, in _get_ticker_data
+    __get_recent_price(ticker)
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 51, in __get_recent_price
+    data = __get_data(ticker).tail(1)
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 41, in __get_data
+    data = web.DataReader(ticker, data_source='yahoo', start=start, end=dt.datetime.today())
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\util\_decorators.py", line 207, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\data.py", line 370, in DataReader
+    return YahooDailyReader(
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\base.py", line 253, in read
+    df = self._read_one_data(self.url, params=self._get_params(self.symbols))
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\yahoo\daily.py", line 156, in _read_one_data
+    raise RemoteDataError(msg.format(symbol, self.__class__.__name__))
+pandas_datareader._utils.RemoteDataError: No data fetched for symbol NGAC using YahooDailyReader
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SKY/history?period1=1632736186&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ENPH/history?period1=1632736187&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CHPT/history?period1=1632736187&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BEEM/history?period1=1632736188&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/WIT/history?period1=1632736189&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/XL/history?period1=1632736190&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CMRE/history?period1=1632736191&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/POOL/history?period1=1632736192&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CROX/history?period1=1632736193&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CWH/history?period1=1632736194&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PENN/history?period1=1632736195&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TTWO/history?period1=1632736196&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TREX/history?period1=1632736197&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FLWS/history?period1=1632736199&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BBWI/history?period1=1632736199&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CLAR/history?period1=1632736200&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EVA/history?period1=1632736201&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/IIPR/history?period1=1632736202&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MAR/history?period1=1632736203&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/WCC/history?period1=1632736204&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SHOO/history?period1=1632736205&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DVN/history?period1=1632736206&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ZYXI/history?period1=1632736207&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TWTR/history?period1=1632736208&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/JD/history?period1=1632736209&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MGNI/history?period1=1632736210&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EA/history?period1=1632736211&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/OPRX/history?period1=1632736212&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/YELP/history?period1=1632736213&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BGFV/history?period1=1632736214&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AUD/history?period1=1632736214&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LIND/history?period1=1632736215&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TRUE/history?period1=1632736216&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VMD/history?period1=1632736217&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GMAB/history?period1=1632736218&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/UTHR/history?period1=1632736219&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FIXX/history?period1=1632736220&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BHVN/history?period1=1632736221&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PLAB/history?period1=1632736222&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LNG/history?period1=1632736223&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CPRT/history?period1=1632736223&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ON/history?period1=1632736224&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HZNP/history?period1=1632736226&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EVR/history?period1=1632736227&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MT/history?period1=1632736228&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AVTR/history?period1=1632736228&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SCHW/history?period1=1632736229&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SNAP/history?period1=1632736230&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AN/history?period1=1632736231&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/INMD/history?period1=1632736232&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DAC/history?period1=1632736233&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CLI/history?period1=1632736234&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RILY/history?period1=1632736235&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CLR/history?period1=1632736236&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ASAN/history?period1=1632736237&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ADM/history?period1=1632736238&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ET/history?period1=1632736239&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SIX/history?period1=1632736240&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CANO/history?period1=1632736241&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DBI/history?period1=1632736242&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DEM/history?period1=1632736242&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GDX/history?period1=1632736243&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/IBM/history?period1=1632736244&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ILMN/history?period1=1632736246&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MRVL/history?period1=1632736247&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PSHZF/history?period1=1632736248&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VZ/history?period1=1632736249&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/XLE/history?period1=1632736250&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ORCL/history?period1=1632736251&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MRK/history?period1=1632736252&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GOLD/history?period1=1632736253&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EXAS/history?period1=1632736254&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PRFT/history?period1=1632736254&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/JCI/history?period1=1632736255&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AMRS/history?period1=1632736256&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ASML/history?period1=1632736257&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CCI/history?period1=1632736258&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CGC/history?period1=1632736259&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/F/history?period1=1632736260&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GLW/history?period1=1632736261&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LORL/history?period1=1632736262&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MJ/history?period1=1632736263&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NXPI/history?period1=1632736264&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/OPEN/history?period1=1632736265&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SATS/history?period1=1632736266&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SFTBY/history?period1=1632736267&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SGMO/history?period1=1632736268&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/STM/history?period1=1632736269&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FLR/history?period1=1632736270&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PLTR/history?period1=1632736271&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PRTK/history?period1=1632736272&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EBS/history?period1=1632736273&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CYBR/history?period1=1632736274&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TCNNF/history?period1=1632736274&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MSFT/history?period1=1632736275&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/STEM/history?period1=1632736276&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EOSE/history?period1=1632736277&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MAXR/history?period1=1632736278&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/JOBY/history?period1=1632736279&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EVGO/history?period1=1632736280&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BLNK/history?period1=1632736281&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AMD/history?period1=1632736282&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BPMC/history?period1=1632736283&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CYSNF/history?period1=1632736284&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DLR/history?period1=1632736285&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SQ/history?period1=1632736286&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/UFO/history?period1=1632736287&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ARWR/history?period1=1632736288&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ERIC/history?period1=1632736288&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GOEV/history?period1=1632736289&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CCHWF/history?period1=1632736290&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SSSS/history?period1=1632736291&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/COUR/history?period1=1632736292&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/INVE/history?period1=1632736293&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VECO/history?period1=1632736294&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CRWD/history?period1=1632736295&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RKLY/history?period1=1632736296&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MVIS/history?period1=1632736297&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CYTH/history?period1=1632736298&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/IPOF/history?period1=1632736298&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NVNXF/history?period1=1632736299&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MNTS/history?period1=1632736300&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SPPI/history?period1=1632736301&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/KMX/history?period1=1632736302&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ASTS/history?period1=1632736303&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NVAX/history?period1=1632736304&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MYMD/history?period1=1632736305&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GKOS/history?period1=1632736306&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LX/history?period1=1632736307&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MOMO/history?period1=1632736308&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NEO/history?period1=1632736309&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NVCR/history?period1=1632736310&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CRLBF/history?period1=1632736311&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CURLF/history?period1=1632736312&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FFNTF/history?period1=1632736312&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GTBIF/history?period1=1632736313&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PLNHF/history?period1=1632736314&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TRSSF/history?period1=1632736315&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AEO/history?period1=1632736316&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BYND/history?period1=1632736317&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CHGG/history?period1=1632736318&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DKNG/history?period1=1632736319&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ETSY/history?period1=1632736320&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FTCH/history?period1=1632736321&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FVRR/history?period1=1632736322&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GOOS/history?period1=1632736323&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HEAR/history?period1=1632736324&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NFLX/history?period1=1632736325&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NKE/history?period1=1632736326&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PINS/history?period1=1632736327&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PLNT/history?period1=1632736328&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PTON/history?period1=1632736329&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RDFN/history?period1=1632736330&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/REAL/history?period1=1632736331&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RVLV/history?period1=1632736332&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SONO/history?period1=1632736333&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SPOT/history?period1=1632736334&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ULTA/history?period1=1632736335&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VRM/history?period1=1632736336&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/WHR/history?period1=1632736337&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SMPL/history?period1=1632736338&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/COST/history?period1=1632736339&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MOS/history?period1=1632736340&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PGTI/history?period1=1632736341&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RIOT/history?period1=1632736341&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GDRX/history?period1=1632736342&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ALLT/history?period1=1632736344&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ATEN/history?period1=1632736345&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CEVA/history?period1=1632736346&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MITK/history?period1=1632736347&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PI/history?period1=1632736348&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PNGAY/history?period1=1632736349&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CLLS/history?period1=1632736351&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FNMA/history?period1=1632736352&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HUT/history?period1=1632736354&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HVBT/history?period1=1632736357&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BRAXF/history?period1=1632736358&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LAC/history?period1=1632736360&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VJET/history?period1=1632736362&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DM/history?period1=1632736364&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VLDR/history?period1=1632736365&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ISENF/history?period1=1632736367&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BFLY/history?period1=1632736368&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BLDE/history?period1=1632736370&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BLDEW/history?period1=1632736372&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HOL/history?period1=1632736373&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 302 35
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /lookup?s=HOL HTTP/1.1" 200 None
+DEBUG:root:################################################################
+ERROR:root:No data fetched for symbol HOL using YahooDailyReader
+Traceback (most recent call last):
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\yahoo\daily.py", line 153, in _read_one_data
+    data = j["context"]["dispatcher"]["stores"]["HistoricalPriceStore"]
+KeyError: 'HistoricalPriceStore'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 66, in _get_ticker_data
+    __get_recent_price(ticker)
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 51, in __get_recent_price
+    data = __get_data(ticker).tail(1)
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 41, in __get_data
+    data = web.DataReader(ticker, data_source='yahoo', start=start, end=dt.datetime.today())
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\util\_decorators.py", line 207, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\data.py", line 370, in DataReader
+    return YahooDailyReader(
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\base.py", line 253, in read
+    df = self._read_one_data(self.url, params=self._get_params(self.symbols))
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\yahoo\daily.py", line 156, in _read_one_data
+    raise RemoteDataError(msg.format(symbol, self.__class__.__name__))
+pandas_datareader._utils.RemoteDataError: No data fetched for symbol HOL using YahooDailyReader
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MAPS/history?period1=1632736375&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DTSRF/history?period1=1632736376&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CIFR/history?period1=1632736378&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MARA/history?period1=1632736380&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BITF/history?period1=1632736382&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VACQ/history?period1=1632736383&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/STWO/history?period1=1632736385&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RTPY/history?period1=1632736387&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LILM/history?period1=1632736389&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DOCU/history?period1=1632736390&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ABNB/history?period1=1632736392&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GILD/history?period1=1632736394&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PYPL/history?period1=1632736396&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/QRVO/history?period1=1632736397&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TDOC/history?period1=1632736399&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TSLA/history?period1=1632736400&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/UBER/history?period1=1632736402&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/W/history?period1=1632736404&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ZG/history?period1=1632736405&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ZM/history?period1=1632736408&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MGA/history?period1=1632736409&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SONY/history?period1=1632736411&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AI/history?period1=1632736412&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MRNA/history?period1=1632736414&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/COIN/history?period1=1632736416&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PLUG/history?period1=1632736417&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RBLX/history?period1=1632736419&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GRWG/history?period1=1632736420&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HOOD/history?period1=1632736422&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DOGE/history?period1=1632736424&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 302 36
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /lookup?s=DOGE HTTP/1.1" 200 None
+DEBUG:root:################################################################
+ERROR:root:No data fetched for symbol DOGE using YahooDailyReader
+Traceback (most recent call last):
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\yahoo\daily.py", line 153, in _read_one_data
+    data = j["context"]["dispatcher"]["stores"]["HistoricalPriceStore"]
+KeyError: 'HistoricalPriceStore'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 66, in _get_ticker_data
+    __get_recent_price(ticker)
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 51, in __get_recent_price
+    data = __get_data(ticker).tail(1)
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 41, in __get_data
+    data = web.DataReader(ticker, data_source='yahoo', start=start, end=dt.datetime.today())
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\util\_decorators.py", line 207, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\data.py", line 370, in DataReader
+    return YahooDailyReader(
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\base.py", line 253, in read
+    df = self._read_one_data(self.url, params=self._get_params(self.symbols))
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\yahoo\daily.py", line 156, in _read_one_data
+    raise RemoteDataError(msg.format(symbol, self.__class__.__name__))
+pandas_datareader._utils.RemoteDataError: No data fetched for symbol DOGE using YahooDailyReader
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DDD/history?period1=1632736426&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ETHE/history?period1=1632736427&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GBTC/history?period1=1632736429&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MCHP/history?period1=1632736431&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MU/history?period1=1632736433&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PRLB/history?period1=1632736435&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RMBS/history?period1=1632736436&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SSYS/history?period1=1632736438&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PSTG/history?period1=1632736440&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ADPT/history?period1=1632736441&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CREE/history?period1=1632736443&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ENTG/history?period1=1632736445&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FORM/history?period1=1632736447&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FSLY/history?period1=1632736448&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GH/history?period1=1632736450&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HALO/history?period1=1632736451&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LSPD/history?period1=1632736453&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MSTR/history?period1=1632736455&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MTLS/history?period1=1632736456&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NTRA/history?period1=1632736458&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PHR/history?period1=1632736460&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/QLYS/history?period1=1632736461&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/UPWK/history?period1=1632736462&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VICR/history?period1=1632736464&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ZNGA/history?period1=1632736466&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BCRX/history?period1=1632736467&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AVAV/history?period1=1632736469&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LGND/history?period1=1632736470&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CCJ/history?period1=1632736473&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/UPST/history?period1=1632736475&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VCYT/history?period1=1632736476&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CRNC/history?period1=1632736478&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DOMO/history?period1=1632736480&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MXL/history?period1=1632736481&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NTLA/history?period1=1632736482&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ONTO/history?period1=1632736484&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DASH/history?period1=1632736486&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DT/history?period1=1632736488&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BEAM/history?period1=1632736490&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/UMC/history?period1=1632736492&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/IPGP/history?period1=1632736494&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AKTS/history?period1=1632736496&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AVEO/history?period1=1632736497&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AXTI/history?period1=1632736499&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CDNA/history?period1=1632736500&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CFMS/history?period1=1632736502&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CGEN/history?period1=1632736504&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CRON/history?period1=1632736505&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FLGT/history?period1=1632736507&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GPRO/history?period1=1632736508&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LOVE/history?period1=1632736510&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NPTN/history?period1=1632736512&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PACB/history?period1=1632736514&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PLL/history?period1=1632736516&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SYRS/history?period1=1632736517&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TCS/history?period1=1632736519&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TNDM/history?period1=1632736520&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VNRX/history?period1=1632736522&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/WKHS/history?period1=1632736524&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FLDM/history?period1=1632736525&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AQB/history?period1=1632736527&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/UUUU/history?period1=1632736529&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/XOMA/history?period1=1632736531&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LC/history?period1=1632736532&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CHMA/history?period1=1632736534&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:root:################################################################
+ERROR:root:'Date'
+Traceback (most recent call last):
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\core\indexes\base.py", line 3361, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 76, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 108, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Date'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 66, in _get_ticker_data
+    __get_recent_price(ticker)
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 51, in __get_recent_price
+    data = __get_data(ticker).tail(1)
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 41, in __get_data
+    data = web.DataReader(ticker, data_source='yahoo', start=start, end=dt.datetime.today())
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\util\_decorators.py", line 207, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\data.py", line 370, in DataReader
+    return YahooDailyReader(
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\base.py", line 253, in read
+    df = self._read_one_data(self.url, params=self._get_params(self.symbols))
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\yahoo\daily.py", line 161, in _read_one_data
+    prices["Date"] = to_datetime(to_datetime(prices["Date"], unit="s").dt.date)
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\core\frame.py", line 3458, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\core\indexes\base.py", line 3363, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Date'
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CSLT/history?period1=1632736536&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/IRMD/history?period1=1632736537&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/UCTT/history?period1=1632736539&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ICHR/history?period1=1632736540&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ATOM/history?period1=1632736542&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DMTK/history?period1=1632736544&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DVAX/history?period1=1632736545&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PAVM/history?period1=1632736547&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/IDYA/history?period1=1632736548&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/APYX/history?period1=1632736550&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LASR/history?period1=1632736551&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EOLS/history?period1=1632736553&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/IRTC/history?period1=1632736554&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NVTA/history?period1=1632736556&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/OESX/history?period1=1632736558&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/REKR/history?period1=1632736560&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SENS/history?period1=1632736562&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EYES/history?period1=1632736564&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CHWY/history?period1=1632736565&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HYRE/history?period1=1632736567&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LYFT/history?period1=1632736569&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MNPR/history?period1=1632736570&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NET/history?period1=1632736572&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PSNL/history?period1=1632736573&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SPCE/history?period1=1632736575&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ITB/history?period1=1632736577&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ROM/history?period1=1632736579&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RSX/history?period1=1632736581&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SSO/history?period1=1632736583&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/USCI/history?period1=1632736585&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/USD/history?period1=1632736586&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FEZ/history?period1=1632736588&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EWH/history?period1=1632736590&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RXL/history?period1=1632736592&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/UYG/history?period1=1632736594&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SBIO/history?period1=1632736596&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AUPH/history?period1=1632736597&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FATE/history?period1=1632736599&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ARQT/history?period1=1632736600&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/QNT-USD/history?period1=1632736602&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BIB/history?period1=1632736603&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SHAK/history?period1=1632736605&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SE/history?period1=1632736606&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TQQQ/history?period1=1632736608&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NBIX/history?period1=1632736610&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DQ/history?period1=1632736611&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/APPS/history?period1=1632736613&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BTAI/history?period1=1632736615&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SPWR/history?period1=1632736616&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ISRG/history?period1=1632736618&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ESPR/history?period1=1632736620&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ROKU/history?period1=1632736622&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LABU/history?period1=1632736623&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SPLK/history?period1=1632736625&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SRNE/history?period1=1632736627&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CDNS/history?period1=1632736629&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SGEN/history?period1=1632736630&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RPRX/history?period1=1632736632&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SEDG/history?period1=1632736634&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/OLED/history?period1=1632736635&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/JAZZ/history?period1=1632736637&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NEPT/history?period1=1632736639&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TGODF/history?period1=1632736640&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VLNCF/history?period1=1632736642&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HEXO/history?period1=1632736643&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MEDIF/history?period1=1632736645&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/OGI/history?period1=1632736647&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VFF/history?period1=1632736649&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ACB/history?period1=1632736650&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SHWZ/history?period1=1632736652&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CWBHF/history?period1=1632736653&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BIO/history?period1=1632736655&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CLVS/history?period1=1632736657&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RGNX/history?period1=1632736658&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SRPT/history?period1=1632736660&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/QDEL/history?period1=1632736661&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ACAD/history?period1=1632736663&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VIR/history?period1=1632736665&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DGP/history?period1=1632736667&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BSXGF/history?period1=1632736668&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FSM/history?period1=1632736670&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MAG/history?period1=1632736672&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NEWP/history?period1=1632736674&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SILV/history?period1=1632736675&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SVM/history?period1=1632736676&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AMBA/history?period1=1632736678&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/APTV/history?period1=1632736680&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AX/history?period1=1632736682&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AYX/history?period1=1632736684&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BABA/history?period1=1632736686&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BIDU/history?period1=1632736688&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/Bili/history?period1=1632736689&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BLUE/history?period1=1632736691&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BOIVF/history?period1=1632736693&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CBWTF/history?period1=1632736694&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CHDN/history?period1=1632736696&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CNTMF/history?period1=1632736698&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DXBRF/history?period1=1632736700&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ELLXF/history?period1=1632736702&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EQOS/history?period1=1632736703&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/Eric/history?period1=1632736705&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FB/history?period1=1632736707&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FN/history?period1=1632736709&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FOUR/history?period1=1632736710&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GLOB/history?period1=1632736712&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HASI/history?period1=1632736714&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HRVSF/history?period1=1632736715&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/IQ/history?period1=1632736717&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/KERN/history?period1=1632736719&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/KHRNF/history?period1=1632736721&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MSGE/history?period1=1632736723&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MSGS/history?period1=1632736725&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NDAQ/history?period1=1632736727&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NTDOY/history?period1=1632736729&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NXTTF/history?period1=1632736731&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PDYPF/history?period1=1632736733&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PGNY/history?period1=1632736735&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ST/history?period1=1632736737&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TCEHY/history?period1=1632736739&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TLLTF/history?period1=1632736740&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TM/history?period1=1632736742&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TMHC/history?period1=1632736744&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TPB/history?period1=1632736746&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TTDKY/history?period1=1632736748&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/XP/history?period1=1632736750&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/XXII/history?period1=1632736751&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/Z/history?period1=1632736753&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RSI/history?period1=1632736755&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/IGACU/history?period1=1632736756&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CLFD/history?period1=1632736758&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CMBM/history?period1=1632736759&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/COE/history?period1=1632736761&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CX/history?period1=1632736763&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FTNT/history?period1=1632736765&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FUTU/history?period1=1632736767&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GRBK/history?period1=1632736768&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GSHD/history?period1=1632736770&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HIMX/history?period1=1632736772&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HVT/history?period1=1632736774&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HZO/history?period1=1632736776&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ICLK/history?period1=1632736778&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/INFU/history?period1=1632736779&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ISDR/history?period1=1632736781&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/JYNT/history?period1=1632736783&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/KRNT/history?period1=1632736784&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LAKE/history?period1=1632736786&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LOGI/history?period1=1632736788&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NIO/history?period1=1632736790&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NIU/history?period1=1632736792&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NTGR/history?period1=1632736793&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NVMI/history?period1=1632736795&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/OIIM/history?period1=1632736796&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PFSI/history?period1=1632736798&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PJT/history?period1=1632736800&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/QGEN/history?period1=1632736803&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SIG/history?period1=1632736805&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SFM/history?period1=1632736807&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SGC/history?period1=1632736809&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SHOP/history?period1=1632736811&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SSTK/history?period1=1632736813&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/STKL/history?period1=1632736815&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/STMP/history?period1=1632736816&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SWBI/history?period1=1632736819&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TGH/history?period1=1632736820&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TME/history?period1=1632736822&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TRIB/history?period1=1632736823&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TSM/history?period1=1632736825&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TUP/history?period1=1632736826&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VIPS/history?period1=1632736828&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VIVO/history?period1=1632736831&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/XPEL/history?period1=1632736834&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/YETI/history?period1=1632736835&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AOSL/history?period1=1632736837&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VSTO/history?period1=1632736839&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HIBB/history?period1=1632736840&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/POLY/history?period1=1632736842&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TX/history?period1=1632736843&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/KE/history?period1=1632736845&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AVNW/history?period1=1632736847&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ECHO/history?period1=1632736849&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RGEN/history?period1=1632736850&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EDAP/history?period1=1632736853&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BNTX/history?period1=1632736854&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SCHN/history?period1=1632736856&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CAMT/history?period1=1632736858&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NMM/history?period1=1632736860&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CMG/history?period1=1632736862&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GNRC/history?period1=1632736864&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/IDXX/history?period1=1632736866&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/KLAC/history?period1=1632736868&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/KR/history?period1=1632736870&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NOW/history?period1=1632736872&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PDD/history?period1=1632736874&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SAM/history?period1=1632736875&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/UI/history?period1=1632736878&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VEEV/history?period1=1632736880&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/WSM/history?period1=1632736882&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/WST/history?period1=1632736884&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NNDM/history?period1=1632736886&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AIRG/history?period1=1632736887&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CRNT/history?period1=1632736889&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LYRA/history?period1=1632736891&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BCACU/history?period1=1632736892&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PSTH/history?period1=1632736894&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PSTH-WT/history?period1=1632736896&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HAAC/history?period1=1632736897&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HAACW/history?period1=1632736899&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EQIX/history?period1=1632736901&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SWKS/history?period1=1632736903&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/KEYS/history?period1=1632736905&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CSCO/history?period1=1632736907&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NOK/history?period1=1632736909&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CGNX/history?period1=1632736911&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AMZN/history?period1=1632736912&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CRM/history?period1=1632736914&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VRTX/history?period1=1632736916&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/REGN/history?period1=1632736917&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BMRN/history?period1=1632736919&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ANET/history?period1=1632736921&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PANW/history?period1=1632736923&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FISV/history?period1=1632736924&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VMW/history?period1=1632736926&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/IFNNY/history?period1=1632736927&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LTCN/history?period1=1632736929&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FFIV/history?period1=1632736931&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LITE/history?period1=1632736932&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/IIVI/history?period1=1632736934&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MTSI/history?period1=1632736936&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/INFN/history?period1=1632736938&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/YEXT/history?period1=1632736940&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SDGR/history?period1=1632736942&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ACEV/history?period1=1632736943&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EDIT/history?period1=1632736945&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SPRO/history?period1=1632736947&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HRTX/history?period1=1632736948&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CRSP/history?period1=1632736950&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ARCT/history?period1=1632736951&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CLDR/history?period1=1632736953&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ZUO/history?period1=1632736955&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PD/history?period1=1632736956&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PING/history?period1=1632736960&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NTNX/history?period1=1632736962&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ALEC/history?period1=1632736963&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GOSS/history?period1=1632736965&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/KLDO/history?period1=1632736967&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HARP/history?period1=1632736969&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LOGC/history?period1=1632736970&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DTIL/history?period1=1632736972&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/HOOK/history?period1=1632736974&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BCEL/history?period1=1632736976&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/STOK/history?period1=1632736978&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BDTX/history?period1=1632736979&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CABA/history?period1=1632736981&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RVMD/history?period1=1632736982&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PASG/history?period1=1632736984&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AKRO/history?period1=1632736985&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PLRX/history?period1=1632736987&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RNA/history?period1=1632736989&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ADCT/history?period1=1632736990&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CDAK/history?period1=1632736992&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CRU-UN/history?period1=1632736994&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CRU/history?period1=1632736995&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CRU-WT/history?period1=1632736997&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EPHYU/history?period1=1632736999&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EPHY/history?period1=1632737000&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/EPHYW/history?period1=1632737002&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PRSRU/history?period1=1632737003&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PRSR/history?period1=1632737005&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PRSRW/history?period1=1632737006&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SVFAU/history?period1=1632737008&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SVFA/history?period1=1632737010&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SVFAW/history?period1=1632737012&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CPUH-UN/history?period1=1632737013&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LMACU/history?period1=1632737015&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/COLIU/history?period1=1632737017&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ATMR-UN/history?period1=1632737019&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ATMR/history?period1=1632737020&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ATMR-WT/history?period1=1632737022&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NDACU/history?period1=1632737024&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PAYC/history?period1=1632737025&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TTD/history?period1=1632737026&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ADBE/history?period1=1632737028&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BAND/history?period1=1632737030&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GPN/history?period1=1632737032&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DLB/history?period1=1632737034&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AXON/history?period1=1632737036&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/QFIN/history?period1=1632737037&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PAGS/history?period1=1632737039&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BRKS/history?period1=1632737040&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SNPS/history?period1=1632737042&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CND/history?period1=1632737044&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DOT1-USD/history?period1=1632737045&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CELO-USD/history?period1=1632737047&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MKR-USD/history?period1=1632737049&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ZRX-USD/history?period1=1632737051&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/NEXO-USD/history?period1=1632737052&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 302 40
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /lookup?s=NEXO-USD HTTP/1.1" 200 None
+DEBUG:root:################################################################
+ERROR:root:No data fetched for symbol NEXO-USD using YahooDailyReader
+Traceback (most recent call last):
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\yahoo\daily.py", line 153, in _read_one_data
+    data = j["context"]["dispatcher"]["stores"]["HistoricalPriceStore"]
+KeyError: 'HistoricalPriceStore'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 66, in _get_ticker_data
+    __get_recent_price(ticker)
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 51, in __get_recent_price
+    data = __get_data(ticker).tail(1)
+  File "G:\Programming\XLTickers\libs\stock_data.py", line 41, in __get_data
+    data = web.DataReader(ticker, data_source='yahoo', start=start, end=dt.datetime.today())
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\util\_decorators.py", line 207, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\data.py", line 370, in DataReader
+    return YahooDailyReader(
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\base.py", line 253, in read
+    df = self._read_one_data(self.url, params=self._get_params(self.symbols))
+  File "C:\Users\tkkt3\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas_datareader\yahoo\daily.py", line 156, in _read_one_data
+    raise RemoteDataError(msg.format(symbol, self.__class__.__name__))
+pandas_datareader._utils.RemoteDataError: No data fetched for symbol NEXO-USD using YahooDailyReader
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/AMT/history?period1=1632737054&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BRK-B/history?period1=1632737055&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DEO/history?period1=1632737056&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ETH/history?period1=1632737058&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GOOGL/history?period1=1632737060&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GS/history?period1=1632737062&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LEN/history?period1=1632737063&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LIT/history?period1=1632737065&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LSXMK/history?period1=1632737067&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LVS/history?period1=1632737069&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LYV/history?period1=1632737070&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PCG/history?period1=1632737072&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/WFC/history?period1=1632737074&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/CALX/history?period1=1632737076&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FCEL/history?period1=1632737077&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ETN/history?period1=1632737079&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/GRMN/history?period1=1632737081&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/ATEC/history?period1=1632737083&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/FCX/history?period1=1632737084&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LCID/history?period1=1632737086&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/MELI/history?period1=1632737088&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/TEL/history?period1=1632737089&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BILI/history?period1=1632737091&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/IDCC/history?period1=1632737093&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/SNX/history?period1=1632737095&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/PTC/history?period1=1632737096&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/DUSL/history?period1=1632737098&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/BBKCF/history?period1=1632737100&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/LH/history?period1=1632737102&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/RBNW/history?period1=1632737104&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/COLI/history?period1=1632737105&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/COLIW/history?period1=1632737107&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://finance.yahoo.com:443 "GET /quote/VTRS/history?period1=1632737109&period2=1633420799&interval=1d&frequency=1d&filter=history HTTP/1.1" 200 None
+DEBUG:root:Done

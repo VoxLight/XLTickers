@@ -1,6 +1,8 @@
 import datetime as dt
 import pandas_datareader as web
 import pandas as pd
+import logging
+import traceback
 from libs.common import trunc
 
 
@@ -63,9 +65,13 @@ def _get_ticker_data(ticker, days_ago=None):
         else:
             __get_recent_price(ticker)
             
-    except:
+    except Exception as e:
         print("No price information found for:", ticker)
         __no_price_info(ticker)
+        logging.getLogger(__name__)
+        logging.debug("################################################################")
+        logging.exception(e)
+        
 
     return __get_from_storage(ticker)
 
@@ -90,3 +96,4 @@ def get_x_week(ticker, days):
 
 if __name__ == "__main__":
     print( get_x_week("TSLA", 52*7) )
+

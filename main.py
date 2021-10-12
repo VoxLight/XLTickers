@@ -1,6 +1,10 @@
 # pypi libs
 
 # local libs
+import logging
+logging.basicConfig(filename='logs.txt', encoding='utf-8', level=logging.DEBUG)
+logging.debug("Starting")
+
 
 # project libs
 from libs.common import _get_valid_input, print_errors, globals_
@@ -44,3 +48,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    logging.debug("Done")
