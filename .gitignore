@@ -1,2 +1,4 @@
 *.xlsx
 test.py
+.~lock*
+__pycache__

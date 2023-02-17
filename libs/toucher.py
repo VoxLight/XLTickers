@@ -1,6 +1,5 @@
 # pypi libs
 from openpyxl.cell.cell import MergedCell
-import pandas_datareader as web
 
 # local libs
 import datetime as dt

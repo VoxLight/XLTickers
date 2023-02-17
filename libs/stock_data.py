@@ -1,6 +1,5 @@
 import datetime as dt
-import pandas_datareader as web
-import pandas as pd
+import yfinance as yf
 import logging
 import traceback
 from libs.common import trunc
@@ -38,7 +37,8 @@ def __get_df_close(data): # Return the closing price of a DF in a truncated form
 # everything helper   
 def __get_data(ticker, days_ago=7):
     start = dt.datetime.today() - dt.timedelta(days=days_ago)
-    data = web.DataReader(ticker, data_source='yahoo', start=start, end=dt.datetime.today())
+    ticker_data = yf.Ticker(ticker)
+    data = ticker_data.history(ticker, start=start, end=dt.datetime.today())
     return data
 
 # _get_ticker_data helper

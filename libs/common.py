@@ -1,6 +1,3 @@
-# pypi libs
-import pandas_datareader as web
-
 # local libs
 from collections import defaultdict as DD
 import datetime as dt
