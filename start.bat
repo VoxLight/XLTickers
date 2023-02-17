@@ -1,5 +1,4 @@
 @echo off
-
 if not exist "venv" (
     echo No virtual environment detected, creating one.
     py -m venv venv
