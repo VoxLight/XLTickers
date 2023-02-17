@@ -1,4 +1,12 @@
+# Excel Data
 *.xlsx
-test.py
 .~lock*
+
+# compiled code
 __pycache__
+
+# Virtual Environments
+venv
+
+# VSCode
+.vscode
