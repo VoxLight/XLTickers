@@ -1,12 +1,21 @@
+# My stuff
+install.bat
+
 # Excel Data
 *.xlsx
 .~lock*
 
-# compiled code
-__pycache__
+# Byte-compiled / optimized / DLL files
+__pycache__/
 
-# Virtual Environments
-venv
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
 # VSCode
 .vscode
