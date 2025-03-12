@@ -38,7 +38,14 @@ def __get_df_close(data): # Return the closing price of a DF in a truncated form
 def __get_data(ticker, days_ago=7):
     start = dt.datetime.today() - dt.timedelta(days=days_ago)
     ticker_data = yf.Ticker(ticker)
-    data = ticker_data.history(ticker, start=start, end=dt.datetime.today())
+    data = ticker_data.history(start=start, end=dt.datetime.today())
+    
+    # Add logging to see the fetched data
+    if data.empty:
+        logging.warning(f"No data fetched for ticker: {ticker}")
+    else:
+        logging.info(f"Fetched data for ticker: {ticker}\n{data}")
+    
     return data
 
 # _get_ticker_data helper

@@ -2,7 +2,7 @@
 
 # local libs
 import logging
-logging.basicConfig(filename='logs.txt', encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(filename='logs.txt', filemode="w", encoding='utf-8', level=logging.DEBUG)
 logging.debug("Starting")
 
 
