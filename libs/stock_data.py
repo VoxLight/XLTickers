@@ -31,7 +31,7 @@ def __get_df_date(data): # Return the DateTime of the DatetimeIndex of a Df
 
 # everything helper/parses data
 def __get_df_close(data): # Return the closing price of a DF in a truncated format
-    return trunc(data["Close"][0])
+    return trunc(data["Close"].iloc[0])  # Use .iloc[0] to avoid FutureWarning
 
 
 # everything helper   
