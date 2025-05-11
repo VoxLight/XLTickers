@@ -7,7 +7,7 @@ import datetime as dt
 # project libs
 from libs.stock_data import get_price
 from libs.toucher import touch_account_rows
-from libs.common import globals_, CONFIG
+from libs.common import globals_, CONFIG, print_errors
 from scripts.common import _cols, _err
 
 
@@ -46,3 +46,4 @@ def run(ws):
     
     print(f"Updating the prices of {ws}.")
     touch_account_rows(ws, _update, [price_column, date_column])
+    print_errors()

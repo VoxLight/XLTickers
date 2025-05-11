@@ -27,7 +27,7 @@ def save(wb):
             _get_valid_input(
                 ask_txt="Would you like to save these changes? (Y/n): ",
                 err_msg="If you don't want to save, use 'ctrl + c' or close this window.",
-                is_valid_condition=lambda x: x == "Y"
+                is_valid_condition=lambda x: x in ('Y', 'y')
             )
             wb.save(fp)
             break
@@ -40,11 +40,8 @@ def main():
     ws, wb = get_worksheet()
     print("What action would you like to preform?")
     SCRIPTS[menu(list(SCRIPTS.keys()))](ws)
-    print_errors()
     save(wb)
     input("Finished. Press enter to continue...")
-
-
 
 if __name__ == "__main__":
     main()

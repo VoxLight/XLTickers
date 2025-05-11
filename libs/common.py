@@ -53,7 +53,6 @@ def print_errors():
 def trunc(num):
     return round(num, int(CONFIG["DATA"]["rounding"]))
  
-    
 
 def _get_valid_input(err_msg, is_valid_condition, ask_txt, return_type=None):
     while not is_valid_condition(txt := input(ask_txt)):
