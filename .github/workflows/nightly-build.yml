@@ -3,7 +3,7 @@ name: Nightly Build (Dev)
 on:
   push:
     branches:
-      - master
+      - nightly
     paths:
       - 'core/**'
       - 'libs/**'
@@ -12,6 +12,9 @@ on:
       - 'config.ini'
       - 'requirements.txt'
       - '.github/workflows/nightly-build.yml'
+  pull_request:
+    branches:
+      - nightly
 
 jobs:
   build:
