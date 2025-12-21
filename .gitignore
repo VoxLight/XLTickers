@@ -3,6 +3,8 @@ install.bat
 logs.txt
 AI_NOTES/*
 AI_NOTES
+*.md
+!README.md
 
 # Excel Data
 *.xlsx
