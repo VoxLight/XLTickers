@@ -3,7 +3,7 @@ name: Nightly Build (Dev)
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - 'core/**'
       - 'libs/**'
