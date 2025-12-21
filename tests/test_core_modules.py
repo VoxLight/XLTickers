@@ -15,32 +15,32 @@ import os
 from datetime import datetime, date
 from pathlib import Path
 
-from core.config import ConfigManager, ConfigError
+from core.config import Config, ConfigError
 from core.ticker_fetcher import get_ticker_price, clear_cache
 from core.excel_processor import process_excel
 
 
 # ==================== Configuration Tests ====================
 
-class TestConfigManager:
-    """Tests for ConfigManager"""
+class TestConfig:
+    """Tests for Config"""
     
     def test_config_loads_from_existing_file(self):
         """Config should load from existing config.ini"""
-        config = ConfigManager.from_ini('./config.ini')
+        config = Config('./config.ini')
         
         assert config is not None
-        assert config.ticker_column in ['A', 'B', 'C']  # Should be a column letter
-        assert config.rounding_precision >= 0
+        assert config.ticker_column in ['A', 'B', 'C', 'D', 'E']  # Should be a column letter
+        assert config.price_decimals >= 0
     
     def test_config_fails_on_missing_file(self):
         """Config should raise ConfigError for missing file"""
         with pytest.raises(ConfigError):
-            ConfigManager.from_ini('./nonexistent.ini')
+            Config('./nonexistent.ini')
     
     def test_config_properties_are_accessible(self):
         """All config properties should be accessible"""
-        config = ConfigManager.from_ini('./config.ini')
+        config = Config('./config.ini')
         
         # Should not raise AttributeError
         _ = config.start_marker
@@ -48,13 +48,12 @@ class TestConfigManager:
         _ = config.ticker_column
         _ = config.price_column
         _ = config.date_column
-        _ = config.rounding_precision
-        _ = config.price_updater_config
-        _ = config.alert_updater_config
+        _ = config.price_decimals
+        _ = config.api_timeout
     
     def test_config_to_dict(self):
         """Config should convert to dict"""
-        config = ConfigManager.from_ini('./config.ini')
+        config = Config('./config.ini')
         config_dict = config.to_dict()
         
         assert isinstance(config_dict, dict)
@@ -123,7 +122,7 @@ class TestExcelProcessor:
     
     def test_process_excel_handles_missing_file(self):
         """Should handle missing file gracefully"""
-        config = ConfigManager.from_ini('./config.ini')
+        config = Config('./config.ini')
         
         success, stats, errors = process_excel(
             file_path='/nonexistent/file.xlsx',
@@ -136,7 +135,7 @@ class TestExcelProcessor:
     
     def test_process_excel_returns_correct_structure(self):
         """Should return properly structured results"""
-        config = ConfigManager.from_ini('./config.ini')
+        config = Config('./config.ini')
         
         # This will fail with missing file, but structure should be correct
         success, stats, errors = process_excel(
@@ -157,7 +156,7 @@ class TestExcelProcessor:
     
     def test_process_excel_progress_callback(self):
         """Progress callback should be called correctly"""
-        config = ConfigManager.from_ini('./config.ini')
+        config = Config('./config.ini')
         
         callback_data = []
         
@@ -183,8 +182,8 @@ class TestIntegration:
     
     def test_config_and_ticker_together(self):
         """Config and ticker fetcher should work together"""
-        config = ConfigManager.from_ini('./config.ini')
-        precision = config.rounding_precision
+        config = Config('./config.ini')
+        precision = config.price_decimals
         
         success, price, date_obj, error = get_ticker_price('AAPL', rounding=precision)
         
@@ -195,11 +194,11 @@ class TestIntegration:
     def test_full_pipeline_structure(self):
         """All modules should integrate without import errors"""
         # This test just verifies imports work
-        from core.config import ConfigManager, ConfigError
+        from core.config import Config, ConfigError
         from core.ticker_fetcher import get_ticker_price
         from core.excel_processor import process_excel
         
-        assert ConfigManager is not None
+        assert Config is not None
         assert get_ticker_price is not None
         assert process_excel is not None
 

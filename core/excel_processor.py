@@ -18,6 +18,7 @@ from openpyxl.utils.datetime import to_excel as date_to_excel
 
 from core.config import Config
 from core.ticker_fetcher import get_ticker_price
+from core.backup_manager import get_backup_manager
 
 
 logger = logging.getLogger(__name__)
@@ -33,6 +34,7 @@ class ProcessingStats:
     rows_skipped: int = 0
     errors_count: int = 0
     processing_time_seconds: float = 0.0
+    backup_path: str = ""  # Path to backup file created
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary for easy serialization."""
@@ -42,6 +44,7 @@ class ProcessingStats:
             'rows_skipped': self.rows_skipped,
             'errors_count': self.errors_count,
             'processing_time_seconds': round(self.processing_time_seconds, 2),
+            'backup_path': self.backup_path,
         }
 
 
@@ -112,7 +115,7 @@ def _update_price_cell(
     ticker: str,
     cell,
     config: Config,
-) -> Tuple[bool, Optional[str]]:
+) -> Tuple[bool, Optional[str], Optional[float]]:
     """
     Update a single price cell with ticker data.
     
@@ -122,7 +125,7 @@ def _update_price_cell(
         config: Configuration manager
         
     Returns:
-        (success: bool, error_msg: Optional[str])
+        (success: bool, error_msg: Optional[str], price: Optional[float])
     """
     success, price, fetch_date, fetch_error = get_ticker_price(
         ticker,
@@ -130,15 +133,15 @@ def _update_price_cell(
     )
     
     if not success:
-        return False, fetch_error
+        return False, fetch_error, None
     
     try:
         cell.value = price
         logger.debug(f"Updated {cell.coordinate} to {price} for {ticker}")
-        return True, None
+        return True, None, price
     
     except Exception as e:
-        return False, f"Failed to write to cell {cell.coordinate}: {str(e)}"
+        return False, f"Failed to write to cell {cell.coordinate}: {str(e)}", None
 
 
 def _update_date_cell(cell) -> Tuple[bool, Optional[str]]:
@@ -164,7 +167,7 @@ def _process_single_row(
     worksheet,
     config: Config,
     action_type: str,
-) -> Tuple[bool, Optional[str]]:
+) -> Tuple[bool, Optional[str], Optional[float]]:
     """
     Process a single row: fetch ticker price and update cells.
     
@@ -176,7 +179,7 @@ def _process_single_row(
         action_type: Type of action ('price', 'alert', etc.)
         
     Returns:
-        (success: bool, error_msg: Optional[str])
+        (success: bool, error_msg: Optional[str], price: Optional[float])
     """
     if action_type == 'price':
         # Get cells to update
@@ -184,16 +187,16 @@ def _process_single_row(
         date_cell = worksheet[f"{config.date_column}{row_num}"]
         
         # Update price
-        success, error = _update_price_cell(ticker, price_cell, config)
+        success, error, price = _update_price_cell(ticker, price_cell, config)
         if not success:
-            return False, error
+            return False, error, None
         
         # Update date
         success, error = _update_date_cell(date_cell)
         if not success:
-            return False, error
+            return False, error, price
         
-        return True, None
+        return True, None, price
     
     elif action_type == 'alert':
         # Update alert cells (similar structure)
@@ -201,19 +204,19 @@ def _process_single_row(
         alert_price_cell = worksheet[f"{config.alert_price_column}{row_num}"]
         
         # Update price
-        success, error = _update_price_cell(ticker, alert_price_cell, config)
+        success, error, price = _update_price_cell(ticker, alert_price_cell, config)
         if not success:
-            return False, error
+            return False, error, None
         
         # Update date
         success, error = _update_date_cell(alert_date_cell)
         if not success:
-            return False, error
+            return False, error, price
         
-        return True, None
+        return True, None, price
     
     else:
-        return False, f"Unknown action type: {action_type}"
+        return False, f"Unknown action type: {action_type}", None
 
 
 # ==================== Main Processing Function ====================
@@ -351,24 +354,26 @@ def process_excel(
         # ========== PHASE 3: Process Each Row ==========
         
         for idx, (ticker, row_num) in enumerate(rows_to_process):
-            # Send progress update
-            if progress_callback:
-                progress_callback({
-                    'current': idx + 1,
-                    'total': total_rows,
-                    'ticker': ticker,
-                    'status': f'Processing {ticker}...',
-                    'elapsed': time.time() - start_time,
-                })
-            
             # Process row
-            success, error_msg = _process_single_row(
+            success, error_msg, price = _process_single_row(
                 ticker,
                 row_num,
                 worksheet,
                 config,
                 action_type,
             )
+            
+            # Send progress update with price
+            if progress_callback:
+                progress_callback({
+                    'current': idx + 1,
+                    'total': total_rows,
+                    'ticker': ticker,
+                    'price': price,
+                    'error': error_msg or '',
+                    'status': f'Processing {ticker}...',
+                    'elapsed': time.time() - start_time,
+                })
             
             if success:
                 stats.tickers_updated += 1
@@ -397,32 +402,40 @@ def process_excel(
         
         stats.rows_processed = total_rows
         
-        # ========== PHASE 4: Save File ==========
+        # ========== PHASE 4: Save File (Create Timestamped Backup) ==========
         
         try:
-            workbook.save(file_path)
-            logger.info(f"Successfully saved {file_path}")
-        except PermissionError:
-            return (
-                False,
-                stats.to_dict(),
-                {
-                    'SAVE_ERROR': {
-                        'message': (
-                            'Cannot save file. Is it open in Excel? '
-                            'Updated data was not saved.'
-                        ),
-                        'rows': list(range(1, stats.rows_processed + 1)),
+            # Use backup manager to create timestamped backup
+            backup_manager = get_backup_manager(keep_backups=config.backup_retention)
+            success, backup_path, error = backup_manager.save_backup(workbook, file_path)
+            
+            if not success:
+                return (
+                    False,
+                    stats.to_dict(),
+                    {
+                        'SAVE_ERROR': {
+                            'message': (
+                                f'Cannot save backup file. {error} '
+                                'Original file was not modified.'
+                            ),
+                            'rows': list(range(1, stats.rows_processed + 1)),
+                        }
                     }
-                }
-            )
+                )
+            
+            logger.info(f"Successfully saved backup to: {backup_path}")
+            
+            # Store backup path in stats for reference
+            stats.backup_path = backup_path
+        
         except Exception as e:
             return (
                 False,
                 stats.to_dict(),
                 {
                     'SAVE_ERROR': {
-                        'message': f'Failed to save file: {str(e)}',
+                        'message': f'Failed to save backup: {str(e)}',
                         'rows': list(range(1, stats.rows_processed + 1)),
                     }
                 }

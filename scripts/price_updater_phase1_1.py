@@ -1,8 +1,15 @@
+"""
+Price Updater - Phase 1.1 Implementation
+
+Uses new core modules (config, ticker_fetcher, excel_processor) while maintaining
+the original CLI interface and behavior.
+"""
+
 # pypi libs
 from openpyxl.utils.datetime import to_excel as date_to_excel
+import datetime as dt
 
 # local libs
-import datetime as dt
 import sys
 from pathlib import Path
 
@@ -20,18 +27,19 @@ NAME = "Price Updater"
 
 def run(ws):
     """
-    Run price updater using new core modules (Phase 1.1).
+    Run price updater using new core modules.
     
     This function:
     1. Loads configuration
     2. Processes Excel file with new robust core logic
     3. Prints results with old interface compatibility
+    4. Stores errors in globals_ for old error reporting
     
     Args:
-        ws: Worksheet (passed by main.py but not used in new implementation)
+        ws: Worksheet (passed by main.py but not used in Phase 1.1)
     """
     print("\n" + "="*50)
-    print("PRICE UPDATER - Phase 1.1")
+    print("PRICE UPDATER - PHASE 1.1")
     print("="*50)
     
     # Get config

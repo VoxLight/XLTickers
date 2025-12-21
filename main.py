@@ -7,9 +7,10 @@ logging.debug("Starting")
 
 
 # project libs
-from libs.common import _get_valid_input, print_errors, globals_
+from libs.common import _get_valid_input, print_errors, globals_, clear
 from libs.opener import get_worksheet
 from libs.menu import menu
+from libs.cli_adapter import init_config, process_excel_with_callback, print_summary
 
 
 # project scripts

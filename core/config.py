@@ -170,6 +170,14 @@ class Config:
         """API timeout in seconds"""
         return 10
     
+    @property
+    def backup_retention(self) -> int:
+        """Number of backup files to keep (0 = keep all)"""
+        try:
+            return int(self._config.get('DATA', {}).get('backup_retention', 2))
+        except (ValueError, KeyError):
+            return 2
+    
     # ==================== Utility Methods ====================
     
     def to_dict(self) -> Dict[str, Dict[str, Any]]:
