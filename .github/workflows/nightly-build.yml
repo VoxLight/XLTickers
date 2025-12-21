@@ -1,0 +1,63 @@
+name: Nightly Build (Dev)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'core/**'
+      - 'libs/**'
+      - 'scripts/**'
+      - 'main.py'
+      - 'config.ini'
+      - 'requirements.txt'
+      - '.github/workflows/nightly-build.yml'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        python-version: ['3.11']
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pyinstaller
+
+    - name: Run tests
+      run: |
+        pip install pytest
+        python -m pytest tests/ -v
+
+    - name: Build executable with PyInstaller
+      run: |
+        pyinstaller XLTickers.spec
+
+    - name: Create nightly build artifact
+      run: |
+        $version = git describe --tags --always
+        $buildName = "XLTickers-nightly-$version.zip"
+        Compress-Archive -Path dist/XLTickers -DestinationPath $buildName
+        echo "BUILD_ARTIFACT=$buildName" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+    - name: Upload nightly build to release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: XLTickers-nightly-*.zip
+        tag_name: nightly
+        prerelease: true
+        generate_release_notes: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

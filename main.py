@@ -11,6 +11,8 @@ from libs.common import _get_valid_input, print_errors, globals_, clear
 from libs.opener import get_worksheet
 from libs.menu import menu
 from libs.cli_adapter import init_config, process_excel_with_callback, print_summary
+from core.version import __version__
+from core.update_checker import check_and_notify_update
 
 
 # project scripts
@@ -37,6 +39,12 @@ def save(wb):
             print("\n    Do you have the workbook open? Please close the workbook before trying to save again.")
 
 def main():
+    # Check for updates (non-blocking, silent if no update)
+    try:
+        check_and_notify_update(__version__, channel='production', interactive=True)
+    except Exception as e:
+        logging.debug(f"Update check failed: {e}")
+    
     # Open the workbook
     ws, wb = get_worksheet()
     print("What action would you like to preform?")
