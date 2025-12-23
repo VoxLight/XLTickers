@@ -1,12 +1,14 @@
 # pypi libs
 
-# local libs
-import logging
-logging.basicConfig(filename='logs.txt', filemode="w", encoding='utf-8', level=logging.DEBUG)
-logging.debug("Starting")
-
-
 # project libs
+from core.logging_config import setup_logging
+
+# Initialize rotating file logging (logs directory, max 1MB per file, keep 5 backups)
+logger = setup_logging(log_dir='./logs', max_bytes=1024*1024, backup_count=5, console_output=False)
+logger.debug("Starting XLTickers")
+
+
+# local libs
 from libs.common import _get_valid_input, print_errors, globals_, clear
 from libs.opener import get_worksheet
 from libs.menu import menu
@@ -43,7 +45,7 @@ def main():
     try:
         check_and_notify_update(__version__, channel='production', interactive=True)
     except Exception as e:
-        logging.debug(f"Update check failed: {e}")
+        logger.debug(f"Update check failed: {e}")
     
     # Open the workbook
     ws, wb = get_worksheet()
@@ -54,4 +56,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    logging.debug("Done")
+    logger.debug("Done")
