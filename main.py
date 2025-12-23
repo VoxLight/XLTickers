@@ -14,7 +14,7 @@ from libs.opener import get_worksheet
 from libs.menu import menu
 from libs.cli_adapter import init_config, process_excel_with_callback, print_summary
 from core.version import __version__
-from core.update_checker import check_and_notify_update
+from core.update_ui import prompt_for_update
 
 
 # project scripts
@@ -41,9 +41,10 @@ def save(wb):
             print("\n    Do you have the workbook open? Please close the workbook before trying to save again.")
 
 def main():
-    # Check for updates (non-blocking, silent if no update)
+    # Check for updates on every launch
+    # Only prompts if update is available
     try:
-        check_and_notify_update(__version__, channel='production', interactive=True)
+        prompt_for_update(__version__, channel='production')
     except Exception as e:
         logger.debug(f"Update check failed: {e}")
     
