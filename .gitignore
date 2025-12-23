@@ -3,6 +3,8 @@ install.bat
 logs.txt
 AI_NOTES/*
 AI_NOTES
+
+# Documentation - Keep essential planning docs only
 *.md
 !README.md
 !PHASE_2_DETAILED_PLAN.md
@@ -10,11 +12,6 @@ AI_NOTES
 !METRICS_IMPLEMENTATION_CHECKLIST.md
 !PERFORMANCE_REFINEMENT_SUMMARY.md
 !PERFORMANCE_DOCS_INDEX.md
-!GIT_WORKFLOW.md
-!BRANCH_PROTECTION.md
-!WORKFLOW_CHECKLIST.md
-!WORKFLOW_SETUP_COMPLETE.md
-!REFINEMENT_COMPLETE.md
 
 # Excel Data
 *.xlsx
@@ -22,6 +19,9 @@ AI_NOTES
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
 
 # Environments
 .env
@@ -34,3 +34,24 @@ venv.bak/
 
 # VSCode
 .vscode
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
