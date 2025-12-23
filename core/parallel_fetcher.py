@@ -23,7 +23,7 @@ Usage:
 
 import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from typing import Dict, Tuple, Optional, Any
+from typing import Dict, Tuple, Optional, Any, Callable
 from datetime import date
 
 from core.ticker_fetcher import get_ticker_price
@@ -37,7 +37,7 @@ def fetch_tickers_parallel(
     max_workers: int = 5,
     rounding: int = 4,
     metrics: Optional[Metrics] = None,
-    progress_callback: Optional[callable] = None,
+    progress_callback: Optional[Callable[[int, int], None]] = None,
 ) -> Dict[str, Tuple[bool, Optional[float], Optional[date], Optional[str]]]:
     """
     Fetch multiple tickers in parallel for better performance.

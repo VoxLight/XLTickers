@@ -1,6 +1,9 @@
 """
 Excel processing module for updating ticker prices and alerts.
 
+⚠️  DEPRECATED: Use core.excel_processor_optimized instead for 3-5x speedup
+    This module is kept for backward compatibility only.
+
 Pure business logic for reading, processing, and writing Excel files.
 Returns structured results with detailed error reporting.
 No global state, no printing—designed for GUI integration.
@@ -19,6 +22,7 @@ from openpyxl.utils.datetime import to_excel as date_to_excel
 from core.config import Config
 from core.ticker_fetcher import get_ticker_price
 from core.backup_manager import get_backup_manager
+from core.deprecation import deprecated
 
 
 logger = logging.getLogger(__name__)
@@ -221,6 +225,10 @@ def _process_single_row(
 
 # ==================== Main Processing Function ====================
 
+@deprecated(
+    replacement='core.excel_processor_optimized.process_excel_optimized',
+    reason='New version is 3-5x faster with parallel fetching, batch writes, and caching'
+)
 def process_excel(
     file_path: str,
     config: Config,

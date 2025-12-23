@@ -15,7 +15,7 @@ Usage:
 import time
 import logging
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, Tuple
 
 from core.config import Config
 from core.metrics import Metrics, metrics_report
